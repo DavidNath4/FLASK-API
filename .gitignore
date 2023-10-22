@@ -1,0 +1,11 @@
+app/__pycache__
+app/config/__pycache__
+app/logs/__pycache__
+app/logs/log_flask.log
+app/models/__pycache__
+app/utils/__pycache__
+app/config/__pycache__
+app/views/__pycache__
+env
+migrations
+.env
