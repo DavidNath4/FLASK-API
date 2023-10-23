@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, current_app
 from flask_restx import Api
 from .config.config import config_dict
 from .views.user import user_ns
@@ -41,5 +41,7 @@ def create_app(config = config_dict['dev']):
     bcrypt = Bcrypt(app)
     jwt = JWTManager(app)
     
+    with app.app_context():
+        current_app.extensions['bcrypt'] = bcrypt
     
     return app

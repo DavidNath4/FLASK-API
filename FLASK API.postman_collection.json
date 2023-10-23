@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "16d57002-bfbc-4fd8-8d9b-9ede71dbfc7a",
+		"name": "FLASK API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18748157"
+	},
+	"item": [
+		{
+			"name": "USER CRUD",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5030/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET By ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"anton\",\r\n  \"email\": \"anton@gmail.com\",\r\n  \"phone\": \"081280211200\",\r\n  \"password\": \"anton\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/user/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"user",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"david nathanael\",\r\n  \"email\": \"david@gmail.com\",\r\n  \"phone\": \"081290152033\",\r\n  \"password\": \"david\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/user/Update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"user",
+								"Update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5030/user/Remove/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"user",
+								"Remove",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MOVIE CRUD",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"MEGALODON\",\r\n    \"genre\" : \"action\",\r\n    \"age_ratings_id\" : null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/movie/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"movie",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"MEGALODON 2\",\r\n    \"genre\" : \"action\",\r\n    \"age_ratings_id\" : 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/movie/Update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"movie",
+								"Update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AGE RATING CRUD",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\" : \"Dewasa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/age_rating/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"age_rating",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"rating\": \"Dewasa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/age_rating/Update/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"age_rating",
+								"Update",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5030/age_rating/Remove/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"age_rating",
+								"Remove",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER MOVIE MANAGEMENT",
+			"item": [
+				{
+					"name": "User select favorite movies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 6,\r\n    \"movie_id\": 1,\r\n    \"review\" : \"Soo good!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/management/SelectMovie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"management",
+								"SelectMovie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User view selected movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5030/management/GetAllSelectedMovie/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"management",
+								"GetAllSelectedMovie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User remove movies from list",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5030/management/RemoveSelectedMovie/2/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"management",
+								"RemoveSelectedMovie",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Update Reviews",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review\" : \"keren bangett\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/management/UpdateSelectedMovie/2/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"management",
+								"UpdateSelectedMovie",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Selected by Users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "- User select favorite movies\n- User can comment/review the movie\n- User remove movies from list\n- User can update the movie review\n- User view the list of movies based on age rating\n- User view all selected movies"
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"johndoe@gmail.com\",\r\n  \"phone\": \"081280172020\",\r\n  \"password\": \"12345\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/auth/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"auth",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"johndoe@gmail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5030/auth/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"auth",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REFRESH",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5030/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5030",
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

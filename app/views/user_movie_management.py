@@ -7,12 +7,15 @@ from ..models.models import User, Movie, User_Movie_List
 
 from ..logs.logs import logger
 
+from flask_jwt_extended import jwt_required, get_jwt_identity
+
 management_ns = Namespace('management', 'Namespace for users')
 
 
 @management_ns.route('/SelectMovie')
 class SelectMovie(Resource):
     @management_ns.doc(description="Select a movie as a favorite for the user")
+    @jwt_required()
     def post(self):
         try:
             data = request.get_json()
@@ -45,6 +48,7 @@ class SelectMovie(Resource):
 @management_ns.route('/GetAllSelectedMovie/<int:user_id>')
 class GetAllSelectedMovie(Resource):
     @management_ns.doc(description="Select a movie as a favorite for the user")
+    @jwt_required()
     def get(self, user_id):
         try:
             movies = Movie.query.join(User_Movie_List).filter(User_Movie_List.user_id == user_id).all()
@@ -86,6 +90,7 @@ class GetAllSelectedMovie(Resource):
 @management_ns.route('/RemoveSelectedMovie/<int:user_id>/<int:movie_id>')
 class RemoveSelectedMovie(Resource):
     @management_ns.doc(description="Remove a movie from the user's list")
+    @jwt_required()
     def delete(self, user_id, movie_id):
         try:
             user_movie = User_Movie_List.query.filter_by(user_id=user_id, movie_id=movie_id).first()
@@ -114,6 +119,7 @@ class RemoveSelectedMovie(Resource):
 @management_ns.route('/UpdateSelectedMovie/<int:user_id>/<int:movie_id>')
 class UpdateSelectedMovie(Resource):
     @management_ns.doc(description="Remove a movie from the user's list")
+    @jwt_required()
     def put(self, user_id, movie_id):
         try:
             data = request.get_json()
