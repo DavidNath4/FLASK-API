@@ -1,4 +1,5 @@
 # Movie API Documentation
+![flaskAPI drawio](https://github.com/DavidNath4/FLASK-API/assets/73566173/5a9de932-a840-47be-8eff-ef87de3964fd)
 
 ## Getting Started
 
@@ -13,8 +14,45 @@
     ```bash
     pip install -r requirements.txt
     ```
+3. Create and set .env contains
+    ```
+    FLASK_APP = app.py
+    FLASk_ENV = development
+    FLASK_DEBUG = True
+    FLASK_RUN_HOST = localhost
+    FLASK_RUN_PORT = 5030
+    SECRET_KEY = ''
+    DEBUG = True
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_ECHO = True
+    SQLALCHEMY_RECORD_QUERIES = True
+    JWT_SECRET_KEY = ''
+    ```
 
-3. Import the POSTMAN Collection "FLASK API.postman_collection.json" to POSTMAN for testing the API.
+4. Create mysql database
+    ```
+    CREATE DATABASE flaskAPI;
+    ```
+    Setup the database url in config
+    ```
+    mysql+pymysql://root:''@localhost/flaskAPI
+    ```
+
+5. Initial, migrate, upgrade db
+    ```bash
+    flask db init
+    ```
+    ```bash
+    flask db migrate -m "initial migrate"
+    ```
+    ```bash
+    flask db upgrade
+    ```
+
+5. Import the POSTMAN Collection to POSTMAN for testing the API.
+    ```
+    FLASK API.postman_collection.json
+    ```    
 
 ## API Usage
 
